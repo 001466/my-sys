@@ -1,0 +1,16 @@
+spring:
+  main:
+    allow-bean-definition-overriding: true
+  cloud:
+    nacos:
+      discovery:
+        namespace: 83c518e2-3332-4fb1-9579-31f2f7211d6f
+        server-addr: 192.168.9.121:8848
+        watch:
+          enabled: false
+        naming-load-cache-at-start: true
+        watch-delay: 30000
+      config:
+        namespace: 83c518e2-3332-4fb1-9579-31f2f7211d6f
+        server-addr: 192.168.9.121:8848
+        timeout: 30000
