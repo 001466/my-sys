@@ -51,7 +51,7 @@ public class BladeCodeGenerator {
 	/**
 	 * 代码所在系统
 	 */
-	private String systemName = SystemConstant.SWORD_NAME;
+	private String webName = SystemConstant.SWORD_NAME;
 	/**
 	 * 代码模块名称
 	 */
@@ -59,11 +59,11 @@ public class BladeCodeGenerator {
 	/**
 	 * 代码所在服务名
 	 */
-	private String serviceName = "blade-service";
+	private String serviceName = "my-service";
 	/**
 	 * 代码生成的包名
 	 */
-	private String packageName = "org.springblade.test";
+	private String packageName = "org.easy.test";
 	/**
 	 * 代码后端生成的地址
 	 */
@@ -71,7 +71,7 @@ public class BladeCodeGenerator {
 	/**
 	 * 代码前端生成的地址
 	 */
-	private String packageWebDir;
+	private String webPath;
 	/**
 	 * 需要去掉的表前缀
 	 */
@@ -79,11 +79,11 @@ public class BladeCodeGenerator {
 	/**
 	 * 需要生成的表名(两者只能取其一)
 	 */
-	private String[] includeTables = {"blade_test"};
+	private String[] tablesInclude = {"blade_test"};
 	/**
 	 * 需要排除的表名(两者只能取其一)
 	 */
-	private String[] excludeTables = {};
+	private String[] tablesExclude = {};
 	/**
 	 * 是否包含基础业务字段
 	 */
@@ -143,23 +143,23 @@ public class BladeCodeGenerator {
 		strategy.setNaming(NamingStrategy.underline_to_camel);
 		strategy.setColumnNaming(NamingStrategy.underline_to_camel);
 		strategy.setTablePrefix(tablePrefix);
-		if (includeTables.length > 0) {
-			strategy.setInclude(includeTables);
+		if (tablesInclude.length > 0) {
+			strategy.setInclude(tablesInclude);
 		}
-		if (excludeTables.length > 0) {
-			strategy.setExclude(excludeTables);
+		if (tablesExclude.length > 0) {
+			strategy.setExclude(tablesExclude);
 		}
 		if (hasSuperEntity) {
-			strategy.setSuperEntityClass("org.springblade.core.mp.base.BaseEntity");
+			strategy.setSuperEntityClass("org.easy.tool.support.BaseEntity");
 			strategy.setSuperEntityColumns(superEntityColumns);
-			strategy.setSuperServiceClass("org.springblade.core.mp.base.BaseService");
-			strategy.setSuperServiceImplClass("org.springblade.core.mp.base.BaseServiceImpl");
+			strategy.setSuperServiceClass("org.easy.mybatisplus.base.BaseService");
+			strategy.setSuperServiceImplClass("org.easy.mybatisplus.base.BaseServiceImpl");
 		} else {
 			strategy.setSuperServiceClass("com.baomidou.mybatisplus.extension.service.IService");
 			strategy.setSuperServiceImplClass("com.baomidou.mybatisplus.extension.service.impl.ServiceImpl");
 		}
 		// 自定义 controller 父类
-		strategy.setSuperControllerClass("org.springblade.core.boot.ctrl.BladeController");
+		//strategy.setSuperControllerClass("org.springblade.core.boot.ctrl.BladeController");
 		strategy.setEntityBuilderModel(false);
 		strategy.setEntityLombokModel(true);
 		strategy.setControllerMappingHyphenStyle(true);
@@ -217,8 +217,8 @@ public class BladeCodeGenerator {
 				return getOutputDir() + "/" + packageName.replace(".", "/") + "/" + "wrapper" + "/" + tableInfo.getEntityName() + "Wrapper" + StringPool.DOT_JAVA;
 			}
 		});
-		if (Func.isNotBlank(packageWebDir)) {
-			if (Func.equals(systemName, SystemConstant.SWORD_NAME)) {
+		if (Func.isNotBlank(webPath)) {
+			if (Func.equals(webName, SystemConstant.SWORD_NAME)) {
 				focList.add(new FileOutConfig("/templates/sword/action.js.vm") {
 					@Override
 					public String outputFile(TableInfo tableInfo) {
@@ -261,7 +261,7 @@ public class BladeCodeGenerator {
 						return getOutputWebDir() + "/pages" + "/" + StringUtil.firstCharToUpper(servicePackage) + "/" + tableInfo.getEntityName() + "/" + tableInfo.getEntityName() + "View.js";
 					}
 				});
-			} else if (Func.equals(systemName, SystemConstant.SABER_NAME)) {
+			} else if (Func.equals(webName, SystemConstant.SABER_NAME)) {
 				focList.add(new FileOutConfig("/templates/saber/api.js.vm") {
 					@Override
 					public String outputFile(TableInfo tableInfo) {
@@ -303,7 +303,7 @@ public class BladeCodeGenerator {
 	 * @return outputDir
 	 */
 	public String getOutputDir() {
-		return (Func.isBlank(packageDir) ? System.getProperty("user.dir") + "/blade-ops/blade-develop" : packageDir) + "/src/main/java";
+		return (Func.isBlank(packageDir) ? System.getProperty("user.dir") + "/code-generator/"+getServiceName() : packageDir) + "/src/main/java";
 	}
 
 	/**
@@ -312,7 +312,7 @@ public class BladeCodeGenerator {
 	 * @return outputDir
 	 */
 	public String getOutputWebDir() {
-		return (Func.isBlank(packageWebDir) ? System.getProperty("user.dir") : packageWebDir) + "/src";
+		return (Func.isBlank(webPath) ? System.getProperty("user.dir") : webPath) + "/src";
 	}
 
 	/**

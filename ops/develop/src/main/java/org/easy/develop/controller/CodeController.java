@@ -99,14 +99,14 @@ public class CodeController {
 		Collection<Code> codes = codeService.listByIds(Func.toIntList(ids));
 		codes.forEach(code -> {
 			BladeCodeGenerator generator = new BladeCodeGenerator();
-			generator.setSystemName(system);
+			generator.setWebName(system);
 			generator.setServiceName(code.getServiceName());
 			generator.setCodeName(code.getCodeName());
 			generator.setPackageName(code.getPackageName());
 			generator.setPackageDir(code.getApiPath());
-			generator.setPackageWebDir(code.getWebPath());
+			generator.setWebPath(code.getWebPath());
 			generator.setTablePrefix(Func.toStrArray(code.getTablePrefix()));
-			generator.setIncludeTables(Func.toStrArray(code.getTableName()));
+			generator.setTablesInclude(Func.toStrArray(code.getTableName()));
 			// 设置是否继承基础业务字段
 			generator.setHasSuperEntity(false);
 			generator.run();

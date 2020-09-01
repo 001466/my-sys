@@ -5,5 +5,7 @@
     <file url="file://$PROJECT_DIR$/ops" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/ops/admin" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/ops/develop" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/service" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/service/system" charset="UTF-8" />
   </component>
 </project>
