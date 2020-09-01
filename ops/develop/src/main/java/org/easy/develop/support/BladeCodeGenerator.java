@@ -109,17 +109,13 @@ public class BladeCodeGenerator {
 
 	public void run() {
 
-
 		Properties props = getProperties();
-
-		String author = props.getProperty("author");
-		String outputDir = getOutputDirOfJava();
 
 		AutoGenerator autoGenerator = new AutoGenerator();
 
 		GlobalConfig globalConfig = new GlobalConfig();
-		globalConfig.setOutputDir(outputDir);
-		globalConfig.setAuthor(author);
+		globalConfig.setOutputDir(getOutputDirOfJava());
+		globalConfig.setAuthor(props.getProperty("author"));
 		globalConfig.setFileOverride(true);
 		globalConfig.setOpen(false);
 		globalConfig.setActiveRecord(false);
@@ -132,8 +128,10 @@ public class BladeCodeGenerator {
 		globalConfig.setServiceImplName("%sServiceImpl");
 		globalConfig.setControllerName("%sController");
 		globalConfig.setSwagger2(isSwagger2);
-
 		autoGenerator.setGlobalConfig(globalConfig);
+
+
+
 
 		DataSourceConfig dataSourceConfig = new DataSourceConfig();
 		String driverName = props.getProperty("spring.datasource.driver-class-name");
@@ -148,8 +146,8 @@ public class BladeCodeGenerator {
 		dataSourceConfig.setDriverName(driverName);
 		dataSourceConfig.setUsername(props.getProperty("spring.datasource.username"));
 		dataSourceConfig.setPassword(props.getProperty("spring.datasource.password"));
-
 		autoGenerator.setDataSource(dataSourceConfig);
+
 
 
 		// 策略配置
@@ -179,23 +177,27 @@ public class BladeCodeGenerator {
 		strategy.setEntityBuilderModel(false);
 		strategy.setEntityLombokModel(true);
 		strategy.setControllerMappingHyphenStyle(true);
-
 		autoGenerator.setStrategy(strategy);
-		// 包配置
-		PackageConfig pc = new PackageConfig();
-		// 控制台扫描
-		pc.setModuleName(null);
-		pc.setParent(packageName);
-		pc.setController("controller");
-		pc.setEntity("entity");
-		pc.setXml("mapper");
 
-		autoGenerator.setPackageInfo(pc);
+
+
+		// 包配置
+		PackageConfig packageConfig = new PackageConfig();
+		packageConfig.setModuleName(null);
+		packageConfig.setParent(packageName);
+		packageConfig.setController("controller");
+		packageConfig.setEntity("entity");
+		packageConfig.setXml("mapper");
+		packageConfig.setMapper("mapper");
+		autoGenerator.setPackageInfo(packageConfig);
+
+
 		autoGenerator.setCfg(getInjectionConfig());
 		autoGenerator.execute();
 	}
 
 	private InjectionConfig getInjectionConfig() {
+
 		String servicePackage = serviceName.split("-").length > 1 ? serviceName.split("-")[1] : serviceName;
 		// 自定义配置
 		Map<String, Object> map = new HashMap<>(16);
@@ -209,7 +211,10 @@ public class BladeCodeGenerator {
 				this.setMap(map);
 			}
 		};
+
 		List<FileOutConfig> focList = new ArrayList<>();
+
+		//生成Java文件
 		focList.add(new FileOutConfig("/templates/sql/menu.sql.vm") {
 			@Override
 			public String outputFile(TableInfo tableInfo) {
@@ -235,65 +240,69 @@ public class BladeCodeGenerator {
 				return getOutputDirOfJava() + "/" + packageName.replace(".", "/") + "/" + "wrapper" + "/" + tableInfo.getEntityName() + "Wrapper" + StringPool.DOT_JAVA;
 			}
 		});
-		if (Func.isNotBlank(webPath)) {
-			if (Func.equals(webName, SystemConstant.SWORD_NAME)) {
-				focList.add(new FileOutConfig("/templates/sword/action.js.vm") {
-					@Override
-					public String outputFile(TableInfo tableInfo) {
-						return getOutputDirOfWeb() + "/actions" + "/" + tableInfo.getEntityName().toLowerCase() + ".js";
-					}
-				});
-				focList.add(new FileOutConfig("/templates/sword/model.js.vm") {
-					@Override
-					public String outputFile(TableInfo tableInfo) {
-						return getOutputDirOfWeb() + "/models" + "/" + tableInfo.getEntityName().toLowerCase() + ".js";
-					}
-				});
-				focList.add(new FileOutConfig("/templates/sword/service.js.vm") {
-					@Override
-					public String outputFile(TableInfo tableInfo) {
-						return getOutputDirOfWeb() + "/services" + "/" + tableInfo.getEntityName().toLowerCase() + ".js";
-					}
-				});
-				focList.add(new FileOutConfig("/templates/sword/list.js.vm") {
-					@Override
-					public String outputFile(TableInfo tableInfo) {
-						return getOutputDirOfWeb() + "/pages" + "/" + StringUtil.firstCharToUpper(servicePackage) + "/" + tableInfo.getEntityName() + "/" + tableInfo.getEntityName() + ".js";
-					}
-				});
-				focList.add(new FileOutConfig("/templates/sword/add.js.vm") {
-					@Override
-					public String outputFile(TableInfo tableInfo) {
-						return getOutputDirOfWeb() + "/pages" + "/" + StringUtil.firstCharToUpper(servicePackage) + "/" + tableInfo.getEntityName() + "/" + tableInfo.getEntityName() + "Add.js";
-					}
-				});
-				focList.add(new FileOutConfig("/templates/sword/edit.js.vm") {
-					@Override
-					public String outputFile(TableInfo tableInfo) {
-						return getOutputDirOfWeb() + "/pages" + "/" + StringUtil.firstCharToUpper(servicePackage) + "/" + tableInfo.getEntityName() + "/" + tableInfo.getEntityName() + "Edit.js";
-					}
-				});
-				focList.add(new FileOutConfig("/templates/sword/view.js.vm") {
-					@Override
-					public String outputFile(TableInfo tableInfo) {
-						return getOutputDirOfWeb() + "/pages" + "/" + StringUtil.firstCharToUpper(servicePackage) + "/" + tableInfo.getEntityName() + "/" + tableInfo.getEntityName() + "View.js";
-					}
-				});
-			} else if (Func.equals(webName, SystemConstant.SABER_NAME)) {
-				focList.add(new FileOutConfig("/templates/saber/api.js.vm") {
-					@Override
-					public String outputFile(TableInfo tableInfo) {
-						return getOutputDirOfWeb() + "/api" + "/" + servicePackage.toLowerCase() + "/" + tableInfo.getEntityName().toLowerCase() + ".js";
-					}
-				});
-				focList.add(new FileOutConfig("/templates/saber/crud.vue.vm") {
-					@Override
-					public String outputFile(TableInfo tableInfo) {
-						return getOutputDirOfWeb() + "/views" + "/" + servicePackage.toLowerCase() + "/" + tableInfo.getEntityName().toLowerCase() + ".vue";
-					}
-				});
-			}
-		}
+
+		//生成Web Js文件
+//		if (Func.isNotBlank(webPath)) {
+//			if (Func.equals(webName, SystemConstant.SWORD_NAME)) {
+//				focList.add(new FileOutConfig("/templates/sword/action.js.vm") {
+//					@Override
+//					public String outputFile(TableInfo tableInfo) {
+//						return getOutputDirOfWeb() + "/actions" + "/" + tableInfo.getEntityName().toLowerCase() + ".js";
+//					}
+//				});
+//				focList.add(new FileOutConfig("/templates/sword/model.js.vm") {
+//					@Override
+//					public String outputFile(TableInfo tableInfo) {
+//						return getOutputDirOfWeb() + "/models" + "/" + tableInfo.getEntityName().toLowerCase() + ".js";
+//					}
+//				});
+//				focList.add(new FileOutConfig("/templates/sword/service.js.vm") {
+//					@Override
+//					public String outputFile(TableInfo tableInfo) {
+//						return getOutputDirOfWeb() + "/services" + "/" + tableInfo.getEntityName().toLowerCase() + ".js";
+//					}
+//				});
+//				focList.add(new FileOutConfig("/templates/sword/list.js.vm") {
+//					@Override
+//					public String outputFile(TableInfo tableInfo) {
+//						return getOutputDirOfWeb() + "/pages" + "/" + StringUtil.firstCharToUpper(servicePackage) + "/" + tableInfo.getEntityName() + "/" + tableInfo.getEntityName() + ".js";
+//					}
+//				});
+//				focList.add(new FileOutConfig("/templates/sword/add.js.vm") {
+//					@Override
+//					public String outputFile(TableInfo tableInfo) {
+//						return getOutputDirOfWeb() + "/pages" + "/" + StringUtil.firstCharToUpper(servicePackage) + "/" + tableInfo.getEntityName() + "/" + tableInfo.getEntityName() + "Add.js";
+//					}
+//				});
+//				focList.add(new FileOutConfig("/templates/sword/edit.js.vm") {
+//					@Override
+//					public String outputFile(TableInfo tableInfo) {
+//						return getOutputDirOfWeb() + "/pages" + "/" + StringUtil.firstCharToUpper(servicePackage) + "/" + tableInfo.getEntityName() + "/" + tableInfo.getEntityName() + "Edit.js";
+//					}
+//				});
+//				focList.add(new FileOutConfig("/templates/sword/view.js.vm") {
+//					@Override
+//					public String outputFile(TableInfo tableInfo) {
+//						return getOutputDirOfWeb() + "/pages" + "/" + StringUtil.firstCharToUpper(servicePackage) + "/" + tableInfo.getEntityName() + "/" + tableInfo.getEntityName() + "View.js";
+//					}
+//				});
+//			} else if (Func.equals(webName, SystemConstant.SABER_NAME)) {
+//				focList.add(new FileOutConfig("/templates/saber/api.js.vm") {
+//					@Override
+//					public String outputFile(TableInfo tableInfo) {
+//						return getOutputDirOfWeb() + "/api" + "/" + servicePackage.toLowerCase() + "/" + tableInfo.getEntityName().toLowerCase() + ".js";
+//					}
+//				});
+//				focList.add(new FileOutConfig("/templates/saber/crud.vue.vm") {
+//					@Override
+//					public String outputFile(TableInfo tableInfo) {
+//						return getOutputDirOfWeb() + "/views" + "/" + servicePackage.toLowerCase() + "/" + tableInfo.getEntityName().toLowerCase() + ".vue";
+//					}
+//				});
+//			}
+//		}
+
+
 		cfg.setFileOutConfigList(focList);
 		return cfg;
 	}
