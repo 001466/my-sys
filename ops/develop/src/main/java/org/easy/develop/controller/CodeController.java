@@ -103,7 +103,7 @@ public class CodeController {
 			generator.setServiceName(code.getServiceName());
 			generator.setCodeName(code.getCodeName());
 			generator.setPackageName(code.getPackageName());
-			generator.setPackageDir(code.getApiPath());
+			generator.setPackagePath(code.getApiPath());
 			generator.setWebPath(code.getWebPath());
 			generator.setTablePrefix(Func.toStrArray(code.getTablePrefix()));
 			generator.setTablesInclude(Func.toStrArray(code.getTableName()));

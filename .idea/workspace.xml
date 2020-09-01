@@ -2,86 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d7ef9ad6-a2b8-403f-b3f2-c7308c99cc74" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/ops/develop/src/main/resources/templates/controller.java.vm" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ops/develop/src/main/resources/templates/entity.java.vm" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ops/develop/src/main/resources/templates/entityDTO.java.vm" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ops/develop/src/main/resources/templates/entityVO.java.vm" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ops/develop/src/main/resources/templates/mapper.java.vm" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ops/develop/src/main/resources/templates/mapper.xml.vm" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ops/develop/src/main/resources/templates/props/generator.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ops/develop/src/main/resources/templates/saber/api.js.vm" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ops/develop/src/main/resources/templates/saber/crud.vue.vm" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ops/develop/src/main/resources/templates/service.java.vm" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ops/develop/src/main/resources/templates/serviceImpl.java.vm" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ops/develop/src/main/resources/templates/sql/menu.sql.vm" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ops/develop/src/main/resources/templates/sword/action.js.vm" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ops/develop/src/main/resources/templates/sword/add.js.vm" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ops/develop/src/main/resources/templates/sword/edit.js.vm" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ops/develop/src/main/resources/templates/sword/list.js.vm" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ops/develop/src/main/resources/templates/sword/model.js.vm" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ops/develop/src/main/resources/templates/sword/service.js.vm" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ops/develop/src/main/resources/templates/sword/view.js.vm" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ops/develop/src/main/resources/templates/wrapper.java.vm" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ops/develop/src/test/resources/templates/controller.java.vm" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ops/develop/src/test/resources/templates/entity.java.vm" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ops/develop/src/test/resources/templates/entityDTO.java.vm" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ops/develop/src/test/resources/templates/entityVO.java.vm" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ops/develop/src/test/resources/templates/mapper.java.vm" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ops/develop/src/test/resources/templates/mapper.xml.vm" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ops/develop/src/test/resources/templates/props/generator.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ops/develop/src/test/resources/templates/saber/api.js.vm" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ops/develop/src/test/resources/templates/saber/crud.vue.vm" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ops/develop/src/test/resources/templates/service.java.vm" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ops/develop/src/test/resources/templates/serviceImpl.java.vm" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ops/develop/src/test/resources/templates/sql/menu.sql.vm" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ops/develop/src/test/resources/templates/sword/action.js.vm" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ops/develop/src/test/resources/templates/sword/add.js.vm" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ops/develop/src/test/resources/templates/sword/edit.js.vm" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ops/develop/src/test/resources/templates/sword/list.js.vm" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ops/develop/src/test/resources/templates/sword/model.js.vm" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ops/develop/src/test/resources/templates/sword/service.js.vm" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ops/develop/src/test/resources/templates/sword/view.js.vm" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ops/develop/src/test/resources/templates/wrapper.java.vm" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/service.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/system/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/system/src/main/java/org/easy/system/controller/ClientController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/system/src/main/java/org/easy/system/dto/ClientDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/system/src/main/java/org/easy/system/entity/Client.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/system/src/main/java/org/easy/system/mapper/ClientMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/system/src/main/java/org/easy/system/mapper/ClientMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/system/src/main/java/org/easy/system/service/IClientService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/system/src/main/java/org/easy/system/service/impl/ClientServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/system/src/main/java/org/easy/system/vo/ClientVO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/system/src/main/java/org/easy/system/wrapper/ClientWrapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/system/system.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/nacos_config_export_2020-08-31 15_50_06.zip" beforeDir="false" afterPath="$PROJECT_DIR$/config/nacos/nacos_config_export_2020-08-31 15_50_06.zip" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ops/develop/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ops/develop/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ops/develop/src/main/java/org/easy/develop/controller/CodeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ops/develop/src/main/java/org/easy/develop/controller/CodeController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ops/develop/src/main/java/org/easy/develop/support/BladeCodeGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/ops/develop/src/main/java/org/easy/develop/support/BladeCodeGenerator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ops/develop/src/test/java/org/easy/develop/CodeGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/ops/develop/src/test/java/org/easy/develop/CodeGenerator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ops/develop/target/classes/org/easy/develop/DevelopApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/ops/develop/target/classes/org/easy/develop/DevelopApplication.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ops/develop/target/classes/org/easy/develop/controller/CodeController.class" beforeDir="false" afterPath="$PROJECT_DIR$/ops/develop/target/classes/org/easy/develop/controller/CodeController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ops/develop/target/classes/org/easy/develop/entity/Code.class" beforeDir="false" afterPath="$PROJECT_DIR$/ops/develop/target/classes/org/easy/develop/entity/Code.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ops/develop/target/classes/org/easy/develop/support/BladeCodeGenerator$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/ops/develop/target/classes/org/easy/develop/support/BladeCodeGenerator$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ops/develop/target/classes/org/easy/develop/support/BladeCodeGenerator$10.class" beforeDir="false" afterPath="$PROJECT_DIR$/ops/develop/target/classes/org/easy/develop/support/BladeCodeGenerator$10.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ops/develop/target/classes/org/easy/develop/support/BladeCodeGenerator$11.class" beforeDir="false" afterPath="$PROJECT_DIR$/ops/develop/target/classes/org/easy/develop/support/BladeCodeGenerator$11.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ops/develop/target/classes/org/easy/develop/support/BladeCodeGenerator$12.class" beforeDir="false" afterPath="$PROJECT_DIR$/ops/develop/target/classes/org/easy/develop/support/BladeCodeGenerator$12.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ops/develop/target/classes/org/easy/develop/support/BladeCodeGenerator$13.class" beforeDir="false" afterPath="$PROJECT_DIR$/ops/develop/target/classes/org/easy/develop/support/BladeCodeGenerator$13.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ops/develop/target/classes/org/easy/develop/support/BladeCodeGenerator$14.class" beforeDir="false" afterPath="$PROJECT_DIR$/ops/develop/target/classes/org/easy/develop/support/BladeCodeGenerator$14.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ops/develop/target/classes/org/easy/develop/support/BladeCodeGenerator$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/ops/develop/target/classes/org/easy/develop/support/BladeCodeGenerator$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ops/develop/target/classes/org/easy/develop/support/BladeCodeGenerator$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/ops/develop/target/classes/org/easy/develop/support/BladeCodeGenerator$3.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ops/develop/target/classes/org/easy/develop/support/BladeCodeGenerator$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/ops/develop/target/classes/org/easy/develop/support/BladeCodeGenerator$4.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ops/develop/target/classes/org/easy/develop/support/BladeCodeGenerator$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/ops/develop/target/classes/org/easy/develop/support/BladeCodeGenerator$5.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ops/develop/target/classes/org/easy/develop/support/BladeCodeGenerator$6.class" beforeDir="false" afterPath="$PROJECT_DIR$/ops/develop/target/classes/org/easy/develop/support/BladeCodeGenerator$6.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ops/develop/target/classes/org/easy/develop/support/BladeCodeGenerator$7.class" beforeDir="false" afterPath="$PROJECT_DIR$/ops/develop/target/classes/org/easy/develop/support/BladeCodeGenerator$7.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ops/develop/target/classes/org/easy/develop/support/BladeCodeGenerator$8.class" beforeDir="false" afterPath="$PROJECT_DIR$/ops/develop/target/classes/org/easy/develop/support/BladeCodeGenerator$8.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ops/develop/target/classes/org/easy/develop/support/BladeCodeGenerator$9.class" beforeDir="false" afterPath="$PROJECT_DIR$/ops/develop/target/classes/org/easy/develop/support/BladeCodeGenerator$9.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ops/develop/target/classes/org/easy/develop/support/BladeCodeGenerator.class" beforeDir="false" afterPath="$PROJECT_DIR$/ops/develop/target/classes/org/easy/develop/support/BladeCodeGenerator.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -102,29 +26,44 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="IService.java" pinned="false" current-in-tab="false">
-        <entry file="jar://E:/maven/localWarehouse/com/baomidou/mybatis-plus-extension/3.1.0/mybatis-plus-extension-3.1.0-sources.jar!/com/baomidou/mybatisplus/extension/service/IService.java">
+      <file leaf-file-name="CodeGenerator.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/ops/develop/src/test/java/org/easy/develop/CodeGenerator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="25">
-              <caret line="130" column="23" lean-forward="true" selection-start-line="130" selection-start-column="23" selection-end-line="130" selection-end-column="23" />
+            <state relative-caret-position="159">
+              <caret line="88" column="50" selection-start-line="88" selection-start-column="50" selection-end-line="88" selection-end-column="50" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="controller.java.vm" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ops/develop/src/main/resources/templates/controller.java.vm">
+      <file leaf-file-name="BladeCodeGenerator.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ops/develop/src/main/java/org/easy/develop/support/BladeCodeGenerator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-688">
-              <caret line="97" column="24" selection-start-line="97" selection-start-column="24" selection-end-line="97" selection-end-column="24" />
+            <state relative-caret-position="3475">
+              <caret line="172" column="14" lean-forward="true" selection-start-line="172" selection-start-column="14" selection-end-line="172" selection-end-column="14" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ClientController.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/service/system/src/main/java/org/easy/system/controller/ClientController.java">
+      <file leaf-file-name="CodeController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ops/develop/src/main/java/org/easy/develop/controller/CodeController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1026">
-              <caret line="89" column="6" lean-forward="true" selection-start-line="89" selection-start-column="6" selection-end-line="89" selection-end-column="6" />
+            <state relative-caret-position="440">
+              <caret line="108" column="77" lean-forward="true" selection-start-line="108" selection-start-column="77" selection-end-line="108" selection-end-column="77" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GlobalConfig.java" pinned="false" current-in-tab="false">
+        <entry file="jar://E:/maven/localWarehouse/com/baomidou/mybatis-plus-generator/3.1.0/mybatis-plus-generator-3.1.0-sources.jar!/com/baomidou/mybatisplus/generator/config/GlobalConfig.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="275">
+              <caret line="29" selection-start-line="29" selection-end-line="29" />
             </state>
           </provider>
         </entry>
@@ -143,6 +82,7 @@
       <find>BaseEntityWrapper</find>
       <find>R.data</find>
       <find>dictClient</find>
+      <find>packageDir</find>
     </findStrings>
     <replaceStrings>
       <replace>menu</replace>
@@ -177,19 +117,19 @@
         <option value="$PROJECT_DIR$/config/sql/dict.sql" />
         <option value="$PROJECT_DIR$/ops/develop/pom.xml" />
         <option value="$PROJECT_DIR$/config/sql/menu.sql" />
-        <option value="$PROJECT_DIR$/ops/develop/src/main/java/org/easy/develop/controller/CodeController.java" />
-        <option value="$PROJECT_DIR$/ops/develop/src/test/java/org/easy/develop/CodeGenerator.java" />
         <option value="$PROJECT_DIR$/ops/develop/src/main/resources/templates/sql/menu.sql.vm" />
         <option value="$PROJECT_DIR$/code-generator/system/src/main/java/org/easy/system/controller/ClientController.java" />
         <option value="$PROJECT_DIR$/service/pom.xml" />
         <option value="$PROJECT_DIR$/service/system/src/main/java/org/easy/system/entity/Client.java" />
-        <option value="$PROJECT_DIR$/ops/develop/src/main/java/org/easy/develop/support/BladeCodeGenerator.java" />
         <option value="$PROJECT_DIR$/service/system/pom.xml" />
         <option value="$PROJECT_DIR$/service/system/src/main/java/org/easy/system/wrapper/ClientWrapper.java" />
         <option value="$PROJECT_DIR$/ops/develop/src/test/resources/templates/wrapper.java.vm" />
         <option value="$PROJECT_DIR$/ops/develop/src/main/resources/templates/wrapper.java.vm" />
         <option value="$PROJECT_DIR$/service/system/src/main/java/org/easy/system/controller/ClientController.java" />
         <option value="$PROJECT_DIR$/ops/develop/src/main/resources/templates/controller.java.vm" />
+        <option value="$PROJECT_DIR$/ops/develop/src/main/java/org/easy/develop/support/BladeCodeGenerator.java" />
+        <option value="$PROJECT_DIR$/ops/develop/src/main/java/org/easy/develop/controller/CodeController.java" />
+        <option value="$PROJECT_DIR$/ops/develop/src/test/java/org/easy/develop/CodeGenerator.java" />
       </list>
     </option>
   </component>
@@ -234,46 +174,6 @@
             <path>
               <item name="my-sys" type="b2602c69:ProjectViewProjectNode" />
               <item name="my-sys" type="462c0819:PsiDirectoryNode" />
-              <item name="code-generator" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="my-sys" type="b2602c69:ProjectViewProjectNode" />
-              <item name="my-sys" type="462c0819:PsiDirectoryNode" />
-              <item name="code-generator" type="462c0819:PsiDirectoryNode" />
-              <item name="system" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="my-sys" type="b2602c69:ProjectViewProjectNode" />
-              <item name="my-sys" type="462c0819:PsiDirectoryNode" />
-              <item name="code-generator" type="462c0819:PsiDirectoryNode" />
-              <item name="system" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="my-sys" type="b2602c69:ProjectViewProjectNode" />
-              <item name="my-sys" type="462c0819:PsiDirectoryNode" />
-              <item name="code-generator" type="462c0819:PsiDirectoryNode" />
-              <item name="system" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="my-sys" type="b2602c69:ProjectViewProjectNode" />
-              <item name="my-sys" type="462c0819:PsiDirectoryNode" />
-              <item name="code-generator" type="462c0819:PsiDirectoryNode" />
-              <item name="system" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="my-sys" type="b2602c69:ProjectViewProjectNode" />
-              <item name="my-sys" type="462c0819:PsiDirectoryNode" />
-              <item name="ops" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="my-sys" type="b2602c69:ProjectViewProjectNode" />
-              <item name="my-sys" type="462c0819:PsiDirectoryNode" />
               <item name="service" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -281,51 +181,6 @@
               <item name="my-sys" type="462c0819:PsiDirectoryNode" />
               <item name="service" type="462c0819:PsiDirectoryNode" />
               <item name="system" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="my-sys" type="b2602c69:ProjectViewProjectNode" />
-              <item name="my-sys" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
-              <item name="system" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="my-sys" type="b2602c69:ProjectViewProjectNode" />
-              <item name="my-sys" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
-              <item name="system" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="my-sys" type="b2602c69:ProjectViewProjectNode" />
-              <item name="my-sys" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
-              <item name="system" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="my-sys" type="b2602c69:ProjectViewProjectNode" />
-              <item name="my-sys" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
-              <item name="system" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="system" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="my-sys" type="b2602c69:ProjectViewProjectNode" />
-              <item name="my-sys" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
-              <item name="system" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="system" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -351,11 +206,11 @@
       <recent name="org.easy.admin.config" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="F:\workspace\my-sys\service\system\src\main\java" />
-      <recent name="F:\workspace\my-sys\ops\develop\src\test\resources\templates" />
-      <recent name="F:\workspace\my-sys\service\system\src\main\java\org\easy\system\entity" />
-      <recent name="F:\workspace\my-sys\ops\develop\src\test\resources\templates\sql" />
-      <recent name="F:\workspace\my-sys\ops\develop\src\test" />
+      <recent name="F:\workspace\my-sys\ops\admin" />
+      <recent name="F:\workspace\my-sys\ops\develop" />
+      <recent name="F:\workspace\my-sys\ops" />
+      <recent name="F:\workspace\my-sys\service\system" />
+      <recent name="F:\workspace\my-sys\service" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -460,6 +315,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
@@ -478,8 +334,8 @@
       <window_info id="Image Layers" order="2" />
       <window_info anchor="right" id="Capture Analysis" order="3" />
       <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49946696" visible="true" weight="0.37337664" />
-      <window_info anchor="bottom" id="Terminal" order="7" weight="0.45779222" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49946696" weight="0.37337664" />
+      <window_info anchor="bottom" id="Terminal" order="7" visible="true" weight="0.22619048" />
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25266525" />
       <window_info anchor="bottom" id="Problems" order="7" />
       <window_info id="JRebel" order="2" side_tool="true" />
@@ -529,13 +385,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/ops/develop/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="376">
-          <caret line="40" column="21" selection-start-line="40" selection-start-column="21" selection-end-line="40" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/blade-ops/blade-develop/src/main/java/org/springblade/system/controller/ClientController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="600">
@@ -709,16 +558,6 @@
     <entry file="file://$PROJECT_DIR$/ops/develop/src/main/resources/templates/sword/action.js.vm">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/ops/develop/src/main/java/org/easy/develop/controller/CodeController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="615">
-          <caret line="112" column="11" lean-forward="true" selection-start-line="112" selection-start-column="11" selection-end-line="112" selection-end-column="11" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ops/develop/src/main/resources/templates/sql/menu.sql.vm">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
@@ -741,13 +580,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="25">
           <caret line="16" column="31" selection-start-line="16" selection-start-column="8" selection-end-line="16" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ops/develop/src/test/java/org/easy/develop/CodeGenerator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="85" selection-start-line="85" selection-end-line="85" />
         </state>
       </provider>
     </entry>
@@ -779,16 +611,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
           <caret line="9" column="38" selection-start-line="9" selection-start-column="38" selection-end-line="9" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ops/develop/src/main/java/org/easy/develop/support/BladeCodeGenerator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="157" column="93" selection-start-line="157" selection-start-column="93" selection-end-line="157" selection-end-column="93" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -874,7 +696,7 @@
     <entry file="jar://E:/maven/localWarehouse/com/baomidou/mybatis-plus-extension/3.1.0/mybatis-plus-extension-3.1.0-sources.jar!/com/baomidou/mybatisplus/extension/service/IService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="25">
-          <caret line="130" column="23" lean-forward="true" selection-start-line="130" selection-start-column="23" selection-end-line="130" selection-end-column="23" />
+          <caret line="130" column="23" selection-start-line="130" selection-start-column="23" selection-end-line="130" selection-end-column="23" />
         </state>
       </provider>
     </entry>
@@ -887,8 +709,42 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/service/system/src/main/java/org/easy/system/controller/ClientController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1026">
-          <caret line="89" column="6" lean-forward="true" selection-start-line="89" selection-start-column="6" selection-end-line="89" selection-end-column="6" />
+        <state relative-caret-position="775">
+          <caret line="65" lean-forward="true" selection-start-line="65" selection-end-line="65" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://E:/maven/localWarehouse/com/baomidou/mybatis-plus-generator/3.1.0/mybatis-plus-generator-3.1.0-sources.jar!/com/baomidou/mybatisplus/generator/config/GlobalConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="275">
+          <caret line="29" selection-start-line="29" selection-end-line="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ops/develop/src/main/java/org/easy/develop/controller/CodeController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="440">
+          <caret line="108" column="77" lean-forward="true" selection-start-line="108" selection-start-column="77" selection-end-line="108" selection-end-column="77" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ops/develop/src/main/java/org/easy/develop/support/BladeCodeGenerator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3475">
+          <caret line="172" column="14" lean-forward="true" selection-start-line="172" selection-start-column="14" selection-end-line="172" selection-end-column="14" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ops/develop/src/test/java/org/easy/develop/CodeGenerator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="159">
+          <caret line="88" column="50" selection-start-line="88" selection-start-column="50" selection-end-line="88" selection-end-column="50" />
         </state>
       </provider>
     </entry>

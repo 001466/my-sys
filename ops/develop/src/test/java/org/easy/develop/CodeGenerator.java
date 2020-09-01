@@ -38,7 +38,10 @@ public class CodeGenerator {
 	 * 代码生成的包名
 	 */
 	public static String JAVA_PACKAGE_NAME = "org.easy.system";
-
+	/**
+	 * 代码生成的路径
+	 */
+	public static String JAVA_PACKAGE_PATH = "F:\\workspace\\my-sys\\service\\system";
 
 
 	/**
@@ -83,6 +86,7 @@ public class CodeGenerator {
 		generator.setCodeName(JAVA_CODE_NAME);
 		generator.setServiceName(JAVA_SERVICE_NAME);
 		generator.setPackageName(JAVA_PACKAGE_NAME);
+		generator.setPackagePath(JAVA_PACKAGE_PATH);
 
 		generator.setWebName(WEB_NAME);
 		generator.setWebPath(WEB_PATH);

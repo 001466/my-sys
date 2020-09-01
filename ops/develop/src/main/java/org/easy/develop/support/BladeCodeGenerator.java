@@ -53,6 +53,13 @@ public class BladeCodeGenerator {
 	 */
 	private String webName = SystemConstant.SWORD_NAME;
 	/**
+	 * 代码前端生成的地址
+	 */
+	private String webPath;
+
+
+
+	/**
 	 * 代码模块名称
 	 */
 	private String codeName;
@@ -64,22 +71,21 @@ public class BladeCodeGenerator {
 	 * 代码生成的包名
 	 */
 	private String packageName = "org.easy.test";
+
+
 	/**
 	 * 代码后端生成的地址
 	 */
-	private String packageDir;
-	/**
-	 * 代码前端生成的地址
-	 */
-	private String webPath;
+	private String packagePath;
+
 	/**
 	 * 需要去掉的表前缀
 	 */
-	private String[] tablePrefix = {"blade_"};
+	private String[] tablePrefix = {"sys_"};
 	/**
 	 * 需要生成的表名(两者只能取其一)
 	 */
-	private String[] tablesInclude = {"blade_test"};
+	private String[] tablesInclude = {"sys_test"};
 	/**
 	 * 需要排除的表名(两者只能取其一)
 	 */
@@ -105,7 +111,7 @@ public class BladeCodeGenerator {
 		Properties props = getProperties();
 		AutoGenerator mpg = new AutoGenerator();
 		GlobalConfig gc = new GlobalConfig();
-		String outputDir = getOutputDir();
+		String outputDir = getOutputDirOfJava();
 		String author = props.getProperty("author");
 		gc.setOutputDir(outputDir);
 		gc.setAuthor(author);
@@ -196,25 +202,25 @@ public class BladeCodeGenerator {
 			@Override
 			public String outputFile(TableInfo tableInfo) {
 				map.put("entityKey", (tableInfo.getEntityName().toLowerCase()));
-				return getOutputDir() + "/" + "/sql/menu.mysql";
+				return getOutputDirOfJava() + "/" + "/sql/menu.mysql";
 			}
 		});
 		focList.add(new FileOutConfig("/templates/entityVO.java.vm") {
 			@Override
 			public String outputFile(TableInfo tableInfo) {
-				return getOutputDir() + "/" + packageName.replace(".", "/") + "/" + "vo" + "/" + tableInfo.getEntityName() + "VO" + StringPool.DOT_JAVA;
+				return getOutputDirOfJava() + "/" + packageName.replace(".", "/") + "/" + "vo" + "/" + tableInfo.getEntityName() + "VO" + StringPool.DOT_JAVA;
 			}
 		});
 		focList.add(new FileOutConfig("/templates/entityDTO.java.vm") {
 			@Override
 			public String outputFile(TableInfo tableInfo) {
-				return getOutputDir() + "/" + packageName.replace(".", "/") + "/" + "dto" + "/" + tableInfo.getEntityName() + "DTO" + StringPool.DOT_JAVA;
+				return getOutputDirOfJava() + "/" + packageName.replace(".", "/") + "/" + "dto" + "/" + tableInfo.getEntityName() + "DTO" + StringPool.DOT_JAVA;
 			}
 		});
 		focList.add(new FileOutConfig("/templates/wrapper.java.vm") {
 			@Override
 			public String outputFile(TableInfo tableInfo) {
-				return getOutputDir() + "/" + packageName.replace(".", "/") + "/" + "wrapper" + "/" + tableInfo.getEntityName() + "Wrapper" + StringPool.DOT_JAVA;
+				return getOutputDirOfJava() + "/" + packageName.replace(".", "/") + "/" + "wrapper" + "/" + tableInfo.getEntityName() + "Wrapper" + StringPool.DOT_JAVA;
 			}
 		});
 		if (Func.isNotBlank(webPath)) {
@@ -222,56 +228,56 @@ public class BladeCodeGenerator {
 				focList.add(new FileOutConfig("/templates/sword/action.js.vm") {
 					@Override
 					public String outputFile(TableInfo tableInfo) {
-						return getOutputWebDir() + "/actions" + "/" + tableInfo.getEntityName().toLowerCase() + ".js";
+						return getOutputDirOfWeb() + "/actions" + "/" + tableInfo.getEntityName().toLowerCase() + ".js";
 					}
 				});
 				focList.add(new FileOutConfig("/templates/sword/model.js.vm") {
 					@Override
 					public String outputFile(TableInfo tableInfo) {
-						return getOutputWebDir() + "/models" + "/" + tableInfo.getEntityName().toLowerCase() + ".js";
+						return getOutputDirOfWeb() + "/models" + "/" + tableInfo.getEntityName().toLowerCase() + ".js";
 					}
 				});
 				focList.add(new FileOutConfig("/templates/sword/service.js.vm") {
 					@Override
 					public String outputFile(TableInfo tableInfo) {
-						return getOutputWebDir() + "/services" + "/" + tableInfo.getEntityName().toLowerCase() + ".js";
+						return getOutputDirOfWeb() + "/services" + "/" + tableInfo.getEntityName().toLowerCase() + ".js";
 					}
 				});
 				focList.add(new FileOutConfig("/templates/sword/list.js.vm") {
 					@Override
 					public String outputFile(TableInfo tableInfo) {
-						return getOutputWebDir() + "/pages" + "/" + StringUtil.firstCharToUpper(servicePackage) + "/" + tableInfo.getEntityName() + "/" + tableInfo.getEntityName() + ".js";
+						return getOutputDirOfWeb() + "/pages" + "/" + StringUtil.firstCharToUpper(servicePackage) + "/" + tableInfo.getEntityName() + "/" + tableInfo.getEntityName() + ".js";
 					}
 				});
 				focList.add(new FileOutConfig("/templates/sword/add.js.vm") {
 					@Override
 					public String outputFile(TableInfo tableInfo) {
-						return getOutputWebDir() + "/pages" + "/" + StringUtil.firstCharToUpper(servicePackage) + "/" + tableInfo.getEntityName() + "/" + tableInfo.getEntityName() + "Add.js";
+						return getOutputDirOfWeb() + "/pages" + "/" + StringUtil.firstCharToUpper(servicePackage) + "/" + tableInfo.getEntityName() + "/" + tableInfo.getEntityName() + "Add.js";
 					}
 				});
 				focList.add(new FileOutConfig("/templates/sword/edit.js.vm") {
 					@Override
 					public String outputFile(TableInfo tableInfo) {
-						return getOutputWebDir() + "/pages" + "/" + StringUtil.firstCharToUpper(servicePackage) + "/" + tableInfo.getEntityName() + "/" + tableInfo.getEntityName() + "Edit.js";
+						return getOutputDirOfWeb() + "/pages" + "/" + StringUtil.firstCharToUpper(servicePackage) + "/" + tableInfo.getEntityName() + "/" + tableInfo.getEntityName() + "Edit.js";
 					}
 				});
 				focList.add(new FileOutConfig("/templates/sword/view.js.vm") {
 					@Override
 					public String outputFile(TableInfo tableInfo) {
-						return getOutputWebDir() + "/pages" + "/" + StringUtil.firstCharToUpper(servicePackage) + "/" + tableInfo.getEntityName() + "/" + tableInfo.getEntityName() + "View.js";
+						return getOutputDirOfWeb() + "/pages" + "/" + StringUtil.firstCharToUpper(servicePackage) + "/" + tableInfo.getEntityName() + "/" + tableInfo.getEntityName() + "View.js";
 					}
 				});
 			} else if (Func.equals(webName, SystemConstant.SABER_NAME)) {
 				focList.add(new FileOutConfig("/templates/saber/api.js.vm") {
 					@Override
 					public String outputFile(TableInfo tableInfo) {
-						return getOutputWebDir() + "/api" + "/" + servicePackage.toLowerCase() + "/" + tableInfo.getEntityName().toLowerCase() + ".js";
+						return getOutputDirOfWeb() + "/api" + "/" + servicePackage.toLowerCase() + "/" + tableInfo.getEntityName().toLowerCase() + ".js";
 					}
 				});
 				focList.add(new FileOutConfig("/templates/saber/crud.vue.vm") {
 					@Override
 					public String outputFile(TableInfo tableInfo) {
-						return getOutputWebDir() + "/views" + "/" + servicePackage.toLowerCase() + "/" + tableInfo.getEntityName().toLowerCase() + ".vue";
+						return getOutputDirOfWeb() + "/views" + "/" + servicePackage.toLowerCase() + "/" + tableInfo.getEntityName().toLowerCase() + ".vue";
 					}
 				});
 			}
@@ -302,8 +308,8 @@ public class BladeCodeGenerator {
 	 *
 	 * @return outputDir
 	 */
-	public String getOutputDir() {
-		return (Func.isBlank(packageDir) ? System.getProperty("user.dir") + "/code-generator/"+getServiceName() : packageDir) + "/src/main/java";
+	public String getOutputDirOfJava() {
+		return (Func.isBlank(packagePath) ? System.getProperty("user.dir") + "/code-generator/"+getServiceName() : packagePath) + "/src/main/java";
 	}
 
 	/**
@@ -311,7 +317,7 @@ public class BladeCodeGenerator {
 	 *
 	 * @return outputDir
 	 */
-	public String getOutputWebDir() {
+	public String getOutputDirOfWeb() {
 		return (Func.isBlank(webPath) ? System.getProperty("user.dir") : webPath) + "/src";
 	}
 
