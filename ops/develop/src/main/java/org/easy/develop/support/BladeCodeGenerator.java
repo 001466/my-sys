@@ -108,40 +108,50 @@ public class BladeCodeGenerator {
 	private Boolean isSwagger2 = Boolean.TRUE;
 
 	public void run() {
+
+
 		Properties props = getProperties();
-		AutoGenerator mpg = new AutoGenerator();
-		GlobalConfig gc = new GlobalConfig();
-		String outputDir = getOutputDirOfJava();
+
 		String author = props.getProperty("author");
-		gc.setOutputDir(outputDir);
-		gc.setAuthor(author);
-		gc.setFileOverride(true);
-		gc.setOpen(false);
-		gc.setActiveRecord(false);
-		gc.setEnableCache(false);
-		gc.setBaseResultMap(true);
-		gc.setBaseColumnList(true);
-		gc.setMapperName("%sMapper");
-		gc.setXmlName("%sMapper");
-		gc.setServiceName("I%sService");
-		gc.setServiceImplName("%sServiceImpl");
-		gc.setControllerName("%sController");
-		gc.setSwagger2(isSwagger2);
-		mpg.setGlobalConfig(gc);
-		DataSourceConfig dsc = new DataSourceConfig();
+		String outputDir = getOutputDirOfJava();
+
+		AutoGenerator autoGenerator = new AutoGenerator();
+
+		GlobalConfig globalConfig = new GlobalConfig();
+		globalConfig.setOutputDir(outputDir);
+		globalConfig.setAuthor(author);
+		globalConfig.setFileOverride(true);
+		globalConfig.setOpen(false);
+		globalConfig.setActiveRecord(false);
+		globalConfig.setEnableCache(false);
+		globalConfig.setBaseResultMap(true);
+		globalConfig.setBaseColumnList(true);
+		globalConfig.setMapperName("%sMapper");
+		globalConfig.setXmlName("%sMapper");
+		globalConfig.setServiceName("I%sService");
+		globalConfig.setServiceImplName("%sServiceImpl");
+		globalConfig.setControllerName("%sController");
+		globalConfig.setSwagger2(isSwagger2);
+
+		autoGenerator.setGlobalConfig(globalConfig);
+
+		DataSourceConfig dataSourceConfig = new DataSourceConfig();
 		String driverName = props.getProperty("spring.datasource.driver-class-name");
 		if (StringUtil.containsAny(driverName, DbType.MYSQL.getDb())) {
-			dsc.setDbType(DbType.MYSQL);
-			dsc.setTypeConvert(new MySqlTypeConvert());
+			dataSourceConfig.setDbType(DbType.MYSQL);
+			dataSourceConfig.setTypeConvert(new MySqlTypeConvert());
 		} else {
-			dsc.setDbType(DbType.POSTGRE_SQL);
-			dsc.setTypeConvert(new PostgreSqlTypeConvert());
+			dataSourceConfig.setDbType(DbType.POSTGRE_SQL);
+			dataSourceConfig.setTypeConvert(new PostgreSqlTypeConvert());
 		}
-		dsc.setUrl(props.getProperty("spring.datasource.url"));
-		dsc.setDriverName(driverName);
-		dsc.setUsername(props.getProperty("spring.datasource.username"));
-		dsc.setPassword(props.getProperty("spring.datasource.password"));
-		mpg.setDataSource(dsc);
+		dataSourceConfig.setUrl(props.getProperty("spring.datasource.url"));
+		dataSourceConfig.setDriverName(driverName);
+		dataSourceConfig.setUsername(props.getProperty("spring.datasource.username"));
+		dataSourceConfig.setPassword(props.getProperty("spring.datasource.password"));
+
+		autoGenerator.setDataSource(dataSourceConfig);
+
+
 		// 策略配置
 		StrategyConfig strategy = new StrategyConfig();
 		// strategy.setCapitalMode(true);// 全局大写命名
@@ -169,7 +179,8 @@ public class BladeCodeGenerator {
 		strategy.setEntityBuilderModel(false);
 		strategy.setEntityLombokModel(true);
 		strategy.setControllerMappingHyphenStyle(true);
-		mpg.setStrategy(strategy);
+
+		autoGenerator.setStrategy(strategy);
 		// 包配置
 		PackageConfig pc = new PackageConfig();
 		// 控制台扫描
@@ -178,9 +189,10 @@ public class BladeCodeGenerator {
 		pc.setController("controller");
 		pc.setEntity("entity");
 		pc.setXml("mapper");
-		mpg.setPackageInfo(pc);
-		mpg.setCfg(getInjectionConfig());
-		mpg.execute();
+
+		autoGenerator.setPackageInfo(pc);
+		autoGenerator.setCfg(getInjectionConfig());
+		autoGenerator.execute();
 	}
 
 	private InjectionConfig getInjectionConfig() {
