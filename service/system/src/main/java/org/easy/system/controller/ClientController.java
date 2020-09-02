@@ -24,6 +24,7 @@ import javax.validation.Valid;
 
 import org.easy.mybatisplus.support.Condition;
 import org.easy.mybatisplus.support.Query;
+import org.easy.system.feign.IClientFeign;
 import org.easy.tool.web.R;
 import org.easy.tool.util.Func;
 //import org.springblade.system.feign.IDictClient;
@@ -45,9 +46,9 @@ import java.util.List;
  */
 @RestController
 @AllArgsConstructor
-@RequestMapping("/client")
+@RequestMapping(IClientFeign.PATH)
 @Api(value = "", tags = "接口")
-public class ClientController {
+public class ClientController implements IClientFeign {
 
 	private IClientService clientService;
 
@@ -122,5 +123,12 @@ public class ClientController {
 		return R.status(clientService.deleteLogic(Func.toIntList(ids)));
 	}
 
-	
+
+	@ApiOperation(value = "登陆验证", notes = "传入clientId", position = 8)
+	@Override
+	public R<ClientVO> loadClientByClientId(String clientId) {
+		Client client=new Client();
+		client.setClientId(clientId);
+		return detail(client);
+	}
 }

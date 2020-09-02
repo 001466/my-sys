@@ -9,11 +9,10 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>service</artifactId>
+    <artifactId>api</artifactId>
     <packaging>pom</packaging>
     <modules>
-        <module>system</module>
-        <module>user</module>
+        <module>system-api</module>
     </modules>
 
 

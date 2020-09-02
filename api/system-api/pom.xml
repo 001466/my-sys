@@ -3,21 +3,15 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
-        <artifactId>service</artifactId>
+        <artifactId>api</artifactId>
         <groupId>org.easy</groupId>
         <version>1.0-SNAPSHOT</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>system</artifactId>
+    <artifactId>system-api</artifactId>
     <packaging>jar</packaging>
     <dependencies>
-        <!--需要下载编译安装https://github.com/001466/my-core库获得以下依赖-->
-        <dependency>
-            <artifactId>easy-cloud-starter</artifactId>
-            <groupId>org.easy</groupId>
-            <version>1.0-SNAPSHOT</version>
-        </dependency>
         <dependency>
             <groupId>org.easy</groupId>
             <artifactId>easy-swagger2-starter</artifactId>
@@ -29,16 +23,14 @@
             <version>1.0-SNAPSHOT</version>
         </dependency>
         <dependency>
-            <groupId>org.easy</groupId>
-            <artifactId>easy-mybatisplus</artifactId>
-            <version>1.0-SNAPSHOT</version>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-openfeign</artifactId>
         </dependency>
         <dependency>
             <groupId>org.easy</groupId>
-            <artifactId>system-api</artifactId>
+            <artifactId>easy-cloud-starter</artifactId>
             <version>1.0-SNAPSHOT</version>
         </dependency>
     </dependencies>
-
 
 </project>
