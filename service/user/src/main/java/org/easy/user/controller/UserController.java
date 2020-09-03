@@ -55,7 +55,7 @@ import java.util.Set;
 @RestController
 @AllArgsConstructor
 @RequestMapping(IUserFeign.PATH)
-@Api(value = "", tags = "接口")
+@Api(value = "", tags = "用户管理")
 @Slf4j
 public class UserController implements IUserFeign {
 
@@ -79,7 +79,7 @@ public class UserController implements IUserFeign {
 	*/
 	@Override
 	@GetMapping("/list")
-	@ApiOperation(value = "分页", notes = "传入user", position = 2)
+	@ApiOperation(value = "列表", notes = "传入user", position = 2)
 	public R<List<UserVO>> list(User user) {
 		List<User> list = userService.list(Condition.getQueryWrapper(user));
 		UserWrapper userWrapper = new UserWrapper();

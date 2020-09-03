@@ -47,7 +47,7 @@ import java.util.List;
 @RestController
 @AllArgsConstructor
 @RequestMapping(IClientFeign.PATH)
-@Api(value = "", tags = "接口")
+@Api(value = "", tags = "应用管理")
 public class ClientController implements IClientFeign {
 
 	private IClientService clientService;
@@ -69,7 +69,7 @@ public class ClientController implements IClientFeign {
 	* 分页 
 	*/
 	@GetMapping("/list")
-	@ApiOperation(value = "分页", notes = "传入client", position = 2)
+	@ApiOperation(value = "例表", notes = "传入client", position = 2)
 	public R<IPage<ClientVO>> list(Client client, Query query) {
 		IPage<Client> pages = clientService.page(Condition.getPage(query), Condition.getQueryWrapper(client));
 		ClientWrapper clientWrapper = new ClientWrapper();

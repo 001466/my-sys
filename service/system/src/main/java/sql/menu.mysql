@@ -1,11 +1,11 @@
 INSERT INTO `menu`(`parent_id`, `code`, `name`, `alias`, `path`, `source`, `sort`, `category`, `action`, `is_open`, `remark`, `is_deleted`)
-VALUES (0, 'client', '应用管理', 'menu', '/system/client', NULL, 1, 1, 0, 1, NULL, 0);
+VALUES (0, 'dict', '字典管理', 'menu', '/system/dict', NULL, 1, 1, 0, 1, NULL, 0);
 set @parentid = (SELECT LAST_INSERT_ID());
 INSERT INTO `menu`(`parent_id`, `code`, `name`, `alias`, `path`, `source`, `sort`, `category`, `action`, `is_open`, `remark`, `is_deleted`)
-VALUES (@parentid, 'client_add', '新增', 'add', '/system/client/add', 'plus', 1, 2, 1, 1, NULL, 0);
+VALUES (@parentid, 'dict_add', '新增', 'add', '/system/dict/add', 'plus', 1, 2, 1, 1, NULL, 0);
 INSERT INTO `menu`(`parent_id`, `code`, `name`, `alias`, `path`, `source`, `sort`, `category`, `action`, `is_open`, `remark`, `is_deleted`)
-VALUES (@parentid, 'client_edit', '修改', 'edit', '/system/client/edit', 'form', 2, 2, 2, 2, NULL, 0);
+VALUES (@parentid, 'dict_edit', '修改', 'edit', '/system/dict/edit', 'form', 2, 2, 2, 2, NULL, 0);
 INSERT INTO `menu`(`parent_id`, `code`, `name`, `alias`, `path`, `source`, `sort`, `category`, `action`, `is_open`, `remark`, `is_deleted`)
-VALUES (@parentid, 'client_delete', '删除', 'delete', '/api/system/client/remove', 'delete', 3, 2, 3, 3, NULL, 0);
+VALUES (@parentid, 'dict_delete', '删除', 'delete', '/api/system/dict/remove', 'delete', 3, 2, 3, 3, NULL, 0);
 INSERT INTO `menu`(`parent_id`, `code`, `name`, `alias`, `path`, `source`, `sort`, `category`, `action`, `is_open`, `remark`, `is_deleted`)
-VALUES (@parentid, 'client_view', '查看', 'view', '/system/client/view', 'file-text', 4, 2, 2, 2, NULL, 0);
+VALUES (@parentid, 'dict_view', '查看', 'view', '/system/dict/view', 'file-text', 4, 2, 2, 2, NULL, 0);

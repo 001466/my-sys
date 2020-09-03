@@ -47,7 +47,7 @@ import $!{superControllerClassPackage};
 import java.util.List;
 
 /**
- * $!{table.comment} 控制器
+ * $!{cfg.codeName} 控制器
  *
  * @author $!{author}
  * @since $!{date}
@@ -55,7 +55,7 @@ import java.util.List;
 @RestController
 @AllArgsConstructor
 @RequestMapping("#if($!{package.ModuleName})/$!{package.ModuleName}#end/$!{cfg.entityKey}")
-@Api(value = "$!{table.comment}", tags = "$!{table.comment}接口")
+@Api(value = "$!{cfg.codeName}", tags = "$!{cfg.codeName}")
 #if($!{superControllerClass})
 public class $!{table.controllerName} extends $!{superControllerClass} {
 #else
@@ -81,11 +81,11 @@ public class $!{table.controllerName} {
 	* 分页 $!{table.comment}
 	*/
 	@GetMapping("/list")
-	@ApiOperation(value = "分页", notes = "传入$!{table.entityPath}", position = 2)
-	public R<IPage<$!{entity}VO>> list($!{entity} $!{table.entityPath}, Query query) {
-		IPage<$!{entity}> pages = $!{table.entityPath}Service.page(Condition.getPage(query), Condition.getQueryWrapper($!{table.entityPath}));
+	@ApiOperation(value = "列表", notes = "传入$!{table.entityPath}", position = 2)
+	public R<List<$!{entity}VO>> list($!{entity} $!{table.entityPath}) {
+		List<$!{entity}> list = $!{table.entityPath}Service.list(Condition.getQueryWrapper($!{table.entityPath}));
 		$!{entity}Wrapper $!{table.entityPath}Wrapper = new $!{entity}Wrapper();
-		return R.success($!{table.entityPath}Wrapper.pageVO(pages));
+		return R.success($!{table.entityPath}Wrapper.listVO(list));
 	}
 
 	/**
