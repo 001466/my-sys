@@ -1,4 +1,4 @@
 
 spring:
   profiles:
-    active: 71
+    active: dev

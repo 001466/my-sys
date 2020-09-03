@@ -9,6 +9,7 @@ import org.easy.user.vo.UserVO;
 import org.springframework.stereotype.Component;
 
 import javax.validation.Valid;
+import java.util.List;
 
 @Component
 public class IUserFeignFallback implements IUserFeign{
@@ -23,7 +24,7 @@ public class IUserFeignFallback implements IUserFeign{
     }
 
     @Override
-    public R<IPage<UserVO>> list(User user, Query query) {
+    public R<List<UserVO>> list(User user) {
         return R.fail();
     }
 }

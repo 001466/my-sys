@@ -14,6 +14,7 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 @SpringBootApplication
 @EnableTransactionManagement
 @EnableConfigurationProperties
+@MapperScan("org.easy.system.mapper")
 public class SystemApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(SystemApplication.class, args);

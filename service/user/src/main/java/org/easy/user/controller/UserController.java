@@ -77,12 +77,13 @@ public class UserController implements IUserFeign {
 	/**
 	* 分页 
 	*/
+	@Override
 	@GetMapping("/list")
 	@ApiOperation(value = "分页", notes = "传入user", position = 2)
-	public R<IPage<UserVO>> list(User user, Query query) {
-		IPage<User> pages = userService.page(Condition.getPage(query), Condition.getQueryWrapper(user));
+	public R<List<UserVO>> list(User user) {
+		List<User> list = userService.list(Condition.getQueryWrapper(user));
 		UserWrapper userWrapper = new UserWrapper();
-		return R.success(userWrapper.pageVO(pages));
+ 		return R.success(userWrapper.listVO(list));
 	}
 
 	/**

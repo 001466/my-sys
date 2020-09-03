@@ -184,11 +184,11 @@ public class MobileLoginFailureHandler extends SimpleUrlAuthenticationFailureHan
         User user=new User();
         user.setLocked(1);
 
-        R<IPage<UserVO>>  lockedRes=  iUserFeign.list(user,null);
+        R<List<UserVO>>  lockedRes=  iUserFeign.list(user);
         if(lockedRes==null || !lockedRes.isSuccess() || lockedRes.getData()==null){
             return;
         }
-        List<UserVO> users=lockedRes.getData().getRecords();
+        List<UserVO> users=lockedRes.getData();
         if(users==null || users.size()==0){return;}
 
 

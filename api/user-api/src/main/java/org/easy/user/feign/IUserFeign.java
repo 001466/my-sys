@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.*;
 
 import javax.management.Query;
 import javax.validation.Valid;
+import java.util.List;
 
 @FeignClient(
         value = AutoConfiguration.SERVICE_NAME,path = IUserFeign.PATH,fallback = IUserFeignFallback.class
@@ -27,5 +28,5 @@ public interface IUserFeign {
 
     @GetMapping("/list")
     @ApiOperation(value = "分页", notes = "传入user", position = 2)
-    R<IPage<UserVO>> list(User user, org.easy.mybatisplus.support.Query query) ;
+    public R<List<UserVO>> list(User user) ;
 }

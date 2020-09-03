@@ -30,6 +30,7 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 @SpringBootApplication
 @EnableCaching
 @EnableTransactionManagement
+@MapperScan("org.easy.user.mapper")
 public class UserApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(UserApplication.class, args);
