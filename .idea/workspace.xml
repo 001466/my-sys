@@ -2,33 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d7ef9ad6-a2b8-403f-b3f2-c7308c99cc74" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/user-api/src/main/java/org/easy/user/feign/IUserFeign.java" beforeDir="false" afterPath="$PROJECT_DIR$/api/user-api/src/main/java/org/easy/user/feign/IUserFeign.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/user-api/src/main/java/org/easy/user/feign/IUserFeignFallback.java" beforeDir="false" afterPath="$PROJECT_DIR$/api/user-api/src/main/java/org/easy/user/feign/IUserFeignFallback.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/bootstrap-111.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/bootstrap-121.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/bootstrap-71.yml" beforeDir="false" afterPath="$PROJECT_DIR$/config/bootstrap-dev.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/bootstrap.yml" beforeDir="false" afterPath="$PROJECT_DIR$/config/bootstrap.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/nacos/nacos_config_export_2020-08-31 15_50_06.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/sql/client.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/sql/dict.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/sql/menu.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/sql/user.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/auth/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/service/auth/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/auth/src/main/java/org/easy/auth/config/JwtTokenStoreConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/auth/src/main/java/org/easy/auth/config/JwtTokenStoreConfiguration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/auth/src/main/java/org/easy/auth/config/RedisTokenStoreConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/auth/src/main/java/org/easy/auth/config/RedisTokenStoreConfiguration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/auth/src/main/java/org/easy/auth/handler/CustomAuthenticationFailureHandler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/auth/src/main/java/org/easy/auth/handler/CustomAuthenticationSuccessHandler.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/service/auth/src/main/java/org/easy/auth/handler/MobileLoginFailureHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/auth/src/main/java/org/easy/auth/handler/MobileLoginFailureHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/auth/src/main/resources/bootstrap-71.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/auth/src/main/resources/bootstrap.yml" beforeDir="false" afterPath="$PROJECT_DIR$/service/auth/src/main/resources/bootstrap.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/gateway/src/main/resources/bootstrap.yml" beforeDir="false" afterPath="$PROJECT_DIR$/service/gateway/src/main/resources/bootstrap.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/system/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/service/system/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/system/src/main/java/org/easy/system/SystemApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/system/src/main/java/org/easy/system/SystemApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/system/src/main/resources/bootstrap-71.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/system/src/main/resources/bootstrap.yml" beforeDir="false" afterPath="$PROJECT_DIR$/service/system/src/main/resources/bootstrap.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/user/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/service/user/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/user/src/main/java/org/easy/user/UserApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/user/src/main/java/org/easy/user/UserApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/user/src/main/java/org/easy/user/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/user/src/main/java/org/easy/user/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/user/src/main/resources/bootstrap-71.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/user/src/main/resources/bootstrap.yml" beforeDir="false" afterPath="$PROJECT_DIR$/service/user/src/main/resources/bootstrap.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/auth/src/main/java/org/easy/auth/log/CheckTokenEndpointLogAspect.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/auth/src/main/java/org/easy/auth/log/TokenEndpointLogAspect.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/gateway/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/service/gateway/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/gateway/src/main/java/org/easy/gateway/jwt/JwtAuthenticationContextRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/gateway/src/main/java/org/easy/gateway/jwt/JwtAuthenticationContextRepository.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -55,7 +38,104 @@
     <option name="MAKE_PROJECT_ON_SAVE" value="true" />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf>
+      <file leaf-file-name="BladeAuthorizationServerConfiguration.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/service/auth/src/main/java/org/easy/auth/config/BladeAuthorizationServerConfiguration.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="380">
+              <caret line="122" selection-start-line="122" selection-end-line="122" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="JwtAuthenticationContextRepository.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/service/gateway/src/main/java/org/easy/gateway/jwt/JwtAuthenticationContextRepository.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="308">
+              <caret line="37" column="51" selection-start-line="37" selection-start-column="51" selection-end-line="37" selection-end-column="51" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MobileLoginFailureHandler.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/service/auth/src/main/java/org/easy/auth/handler/MobileLoginFailureHandler.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="164">
+              <caret line="63" column="18" selection-start-line="63" selection-start-column="18" selection-end-line="63" selection-end-column="18" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="JwtTokenStoreConfiguration.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/service/auth/src/main/java/org/easy/auth/config/JwtTokenStoreConfiguration.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="290">
+              <caret line="43" column="41" selection-start-line="43" selection-start-column="41" selection-end-line="43" selection-end-column="41" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RedisTokenStoreConfiguration.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/service/auth/src/main/java/org/easy/auth/config/RedisTokenStoreConfiguration.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="325">
+              <caret line="19" column="41" selection-start-line="19" selection-start-column="41" selection-end-line="19" selection-end-column="41" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RedisTokenLogoutSuccessHandler.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/service/auth/src/main/java/org/easy/auth/handler/RedisTokenLogoutSuccessHandler.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="182">
+              <caret line="41" column="69" lean-forward="true" selection-start-line="41" selection-start-column="69" selection-end-line="41" selection-end-column="69" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TokenConstant.class" pinned="false" current-in-tab="false">
+        <entry file="jar://E:/maven/localWarehouse/com/deocean/deocean-tool-starter/0.0.1-SNAPSHOT/deocean-tool-starter-0.0.1-SNAPSHOT.jar!/com/deocean/common/constant/TokenConstant.class">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="175">
+              <caret line="10" column="27" selection-start-line="10" selection-start-column="27" selection-end-line="10" selection-end-column="27" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/service/auth/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="309">
+              <caret line="32" column="21" selection-start-line="32" selection-start-column="21" selection-end-line="32" selection-end-column="21" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/service/gateway/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="482">
+              <caret line="101" column="21" lean-forward="true" selection-start-line="101" selection-start-column="21" selection-end-line="101" selection-end-column="21" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -79,8 +159,8 @@
       <find>dictClient</find>
       <find>packageDir</find>
       <find>list</find>
-      <find>deocean</find>
       <find>jdbc</find>
+      <find>deocean</find>
     </findStrings>
     <replaceStrings>
       <replace>menu</replace>
@@ -101,8 +181,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/ops/develop/src/test/java/org/easy/develop/CodeGenerator.java" />
-        <option value="$PROJECT_DIR$/api/user-api/src/main/java/org/easy/user/AutoConfiguration.java" />
         <option value="$PROJECT_DIR$/api/user-api/src/main/resources/META-INF/spring.factories" />
         <option value="$PROJECT_DIR$/api/system-api/src/main/resources/META-INF/spring.factories" />
         <option value="$PROJECT_DIR$/api/user-api/src/main/java/org/easy/user/entity/User.java" />
@@ -120,7 +198,6 @@
         <option value="$PROJECT_DIR$/service/auth/src/main/java/org/easy/auth/endpoint/OauthTokenEndPoint.java" />
         <option value="$PROJECT_DIR$/service/auth/src/main/java/org/easy/auth/endpoint/ReflushUserInfoController.java" />
         <option value="$PROJECT_DIR$/service/auth/src/main/java/org/easy/auth/config/BladeAuthorizationServerConfiguration.java" />
-        <option value="$PROJECT_DIR$/service/auth/src/main/java/org/easy/auth/config/JwtTokenStoreConfiguration.java" />
         <option value="$PROJECT_DIR$/service/auth/src/main/java/org/easy/auth/config/SecurityConfiguration.java" />
         <option value="$PROJECT_DIR$/api/auth-api/pom.xml" />
         <option value="$PROJECT_DIR$/api/auth-api/src/main/java/org/easy/auth/AutoConfiguration.java" />
@@ -128,7 +205,6 @@
         <option value="$PROJECT_DIR$/api/auth-api/src/main/java/org/easy/auth/feign/ReflushUserInfoFeignFallback.java" />
         <option value="$PROJECT_DIR$/api/auth-api/src/main/java/org/easy/auth/feign/TokenFeign.java" />
         <option value="$PROJECT_DIR$/api/auth-api/src/main/resources/META-INF/spring.factories" />
-        <option value="$PROJECT_DIR$/service/gateway/pom.xml" />
         <option value="$PROJECT_DIR$/service/gateway/src/main/java/org/easy/gateway/swagger2/SwaggerConfig.java" />
         <option value="$PROJECT_DIR$/service/gateway/src/main/java/org/easy/gateway/filter/SecureUriFilter.java" />
         <option value="$PROJECT_DIR$/service/gateway/src/main/java/org/easy/gateway/filter/SecureDeviceFilter.java" />
@@ -149,9 +225,13 @@
         <option value="$PROJECT_DIR$/service/user/src/main/java/org/easy/user/controller/UserController.java" />
         <option value="$PROJECT_DIR$/api/user-api/src/main/java/org/easy/user/feign/IUserFeign.java" />
         <option value="$PROJECT_DIR$/api/user-api/src/main/java/org/easy/user/feign/IUserFeignFallback.java" />
-        <option value="$PROJECT_DIR$/service/auth/src/main/java/org/easy/auth/handler/MobileLoginFailureHandler.java" />
         <option value="$PROJECT_DIR$/service/gateway/src/main/resources/bootstrap.yml" />
         <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/service/gateway/pom.xml" />
+        <option value="$PROJECT_DIR$/service/gateway/src/main/java/org/easy/gateway/jwt/JwtAuthenticationContextRepository.java" />
+        <option value="$PROJECT_DIR$/service/auth/src/main/java/org/easy/auth/handler/MobileLoginFailureHandler.java" />
+        <option value="$PROJECT_DIR$/service/auth/src/main/java/org/easy/auth/config/JwtTokenStoreConfiguration.java" />
+        <option value="$PROJECT_DIR$/service/auth/src/main/java/org/easy/auth/config/RedisTokenStoreConfiguration.java" />
       </list>
     </option>
   </component>
@@ -191,7 +271,58 @@
             <path>
               <item name="my-sys" type="b2602c69:ProjectViewProjectNode" />
               <item name="my-sys" type="462c0819:PsiDirectoryNode" />
-              <item name="config" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="my-sys" type="b2602c69:ProjectViewProjectNode" />
+              <item name="my-sys" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+              <item name="auth" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="my-sys" type="b2602c69:ProjectViewProjectNode" />
+              <item name="my-sys" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+              <item name="auth" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="my-sys" type="b2602c69:ProjectViewProjectNode" />
+              <item name="my-sys" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+              <item name="auth" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="my-sys" type="b2602c69:ProjectViewProjectNode" />
+              <item name="my-sys" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+              <item name="auth" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="my-sys" type="b2602c69:ProjectViewProjectNode" />
+              <item name="my-sys" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+              <item name="auth" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="auth" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="my-sys" type="b2602c69:ProjectViewProjectNode" />
+              <item name="my-sys" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+              <item name="auth" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="auth" type="462c0819:PsiDirectoryNode" />
+              <item name="handler" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -346,8 +477,8 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.GateWayApplication" />
-        <item itemvalue="Application.UserApplication" />
         <item itemvalue="Application.AuthApplication" />
+        <item itemvalue="Application.UserApplication" />
         <item itemvalue="Application.SystemApplication" />
         <item itemvalue="Application.CodeGenerator" />
       </list>
@@ -372,7 +503,7 @@
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
       <window_info anchor="bottom" id="JRebel Console" order="7" sideWeight="0.50053304" side_tool="true" weight="0.37229437" />
-      <window_info anchor="right" id="Maven Projects" order="3" weight="0.42324093" />
+      <window_info anchor="right" id="Maven Projects" order="3" visible="true" weight="0.21428572" />
       <window_info anchor="bottom" id="JRebel Executor" order="7" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
@@ -386,7 +517,7 @@
       <window_info id="Image Layers" order="2" />
       <window_info anchor="right" id="Capture Analysis" order="3" />
       <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49946696" visible="true" weight="0.3409091" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49946696" visible="true" weight="0.6764069" />
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.36796537" />
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25746268" />
       <window_info anchor="bottom" id="Problems" order="7" />
@@ -403,7 +534,7 @@
     <layout-to-restore>
       <window_info id="Designer" order="2" />
       <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49946696" visible="true" weight="0.4318182" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49946696" weight="0.3409091" />
       <window_info id="Image Layers" order="3" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
@@ -411,14 +542,14 @@
       <window_info id="UI Designer" order="4" />
       <window_info id="JRebel" order="5" side_tool="true" />
       <window_info id="Favorites" order="6" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="7" weight="0.36796537" />
+      <window_info anchor="bottom" id="Terminal" order="7" visible="true" weight="0.36796537" />
       <window_info id="Capture Tool" order="7" />
       <window_info anchor="right" id="Capture Analysis" order="4" />
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Problems" order="9" />
       <window_info anchor="bottom" id="Version Control" order="10" />
-      <window_info anchor="right" id="Maven Projects" order="5" visible="true" weight="0.42324093" />
+      <window_info anchor="right" id="Maven Projects" order="5" weight="0.42324093" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="JRebel Executor" order="11" />
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25746268" />
@@ -437,76 +568,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/api/auth-api/src/main/java/org/easy/auth/feign/ReflushUserInfoFeignFallbackFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="16" column="34" selection-start-line="16" selection-start-column="6" selection-end-line="16" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/auth-api/src/main/java/org/easy/auth/feign/TokenFeignFallbackFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="400">
-          <caret line="22" selection-start-line="22" selection-end-line="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/auth-api/src/main/java/org/easy/auth/feign/ReflushUserInfoFeignFallback.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="125">
-          <caret line="5" column="10" selection-start-line="5" selection-start-column="10" selection-end-line="5" selection-end-column="10" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#216#217#0" expanded="true" />
-            <element signature="e#238#239#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/auth-api/src/main/java/org/easy/auth/feign/TokenFeign.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="475">
-          <caret line="19" column="32" selection-start-line="19" selection-start-column="32" selection-end-line="19" selection-end-column="32" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/auth-api/src/main/resources/META-INF/spring.factories">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="25">
-          <caret line="1" column="31" selection-start-line="1" selection-start-column="31" selection-end-line="1" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/auth-api/src/main/java/org/easy/auth/feign/ReflushUserInfoFeign.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="18" selection-start-line="18" selection-end-line="18" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/service/auth/src/main/java/org/easy/auth/endpoint/ReflushUserInfoController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="696">
-          <caret line="40" column="1" selection-start-line="40" selection-start-column="1" selection-end-line="40" selection-end-column="1" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/service/gateway/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3600">
-          <caret line="144" column="21" selection-start-line="144" selection-start-column="21" selection-end-line="144" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/service/gateway/src/main/java/org/easy/gateway/GateWayApplication.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="350">
@@ -553,13 +614,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
           <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/service/gateway/src/main/java/org/easy/gateway/jwt/JwtAuthenticationContextRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -690,30 +744,10 @@
     <entry file="file://$PROJECT_DIR$/service/auth/auth.iml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/service/auth/src/main/java/org/easy/auth/config/BladeAuthorizationServerConfiguration.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="621">
-          <caret line="127" column="44" selection-start-line="127" selection-start-column="44" selection-end-line="127" selection-end-column="44" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/service/auth/src/main/java/org/easy/auth/config/BladeResourceServerConfiguration.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="230">
           <caret line="36" column="13" selection-start-line="36" selection-start-column="13" selection-end-line="36" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/service/auth/src/main/java/org/easy/auth/config/JwtTokenStoreConfiguration.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="641">
-          <caret line="77" column="5" selection-start-line="77" selection-start-column="5" selection-end-line="77" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -748,13 +782,6 @@
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-525" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/service/auth/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="29" column="55" selection-start-line="29" selection-start-column="55" selection-end-line="29" selection-end-column="55" />
-        </state>
       </provider>
     </entry>
     <entry file="jar://E:/maven/localWarehouse/org/easy/easy-mybatisplus/1.0-SNAPSHOT/easy-mybatisplus-1.0-SNAPSHOT.jar!/org/easy/mybatisplus/support/Query.class">
@@ -804,16 +831,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/service/auth/src/main/java/org/easy/auth/handler/MobileLoginFailureHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="190" column="47" selection-start-line="190" selection-start-column="47" selection-end-line="190" selection-end-column="47" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/service/gateway/src/main/resources/bootstrap.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="50">
@@ -831,6 +848,106 @@
     <entry file="file://$PROJECT_DIR$/config/sql/dict.sql">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-500" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/service/auth/src/main/java/org/easy/auth/config/BladeAuthorizationServerConfiguration.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="380">
+          <caret line="122" selection-start-line="122" selection-end-line="122" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://E:/maven/localWarehouse/com/deocean/deocean-tool-starter/0.0.1-SNAPSHOT/deocean-tool-starter-0.0.1-SNAPSHOT.jar!/com/deocean/common/constant/TokenConstant.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="10" column="27" selection-start-line="10" selection-start-column="27" selection-end-line="10" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/service/auth/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="309">
+          <caret line="32" column="21" selection-start-line="32" selection-start-column="21" selection-end-line="32" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/service/gateway/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="482">
+          <caret line="101" column="21" lean-forward="true" selection-start-line="101" selection-start-column="21" selection-end-line="101" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/service/gateway/src/main/java/org/easy/gateway/jwt/JwtAuthenticationContextRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="308">
+          <caret line="37" column="51" selection-start-line="37" selection-start-column="51" selection-end-line="37" selection-end-column="51" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/service/auth/src/main/java/org/easy/auth/handler/MobileLoginFailureHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="164">
+          <caret line="63" column="18" selection-start-line="63" selection-start-column="18" selection-end-line="63" selection-end-column="18" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/service/auth/src/main/java/org/easy/auth/handler/CustomAuthenticationFailureHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-43">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/service/auth/src/main/java/org/easy/auth/handler/CustomAuthenticationSuccessHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-268" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/service/auth/src/main/java/org/easy/auth/config/JwtTokenStoreConfiguration.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="290">
+          <caret line="43" column="41" selection-start-line="43" selection-start-column="41" selection-end-line="43" selection-end-column="41" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/service/auth/src/main/java/org/easy/auth/log/TokenEndpointLogAspect.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/service/auth/src/main/java/org/easy/auth/log/CheckTokenEndpointLogAspect.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="50">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/service/auth/src/main/java/org/easy/auth/config/RedisTokenStoreConfiguration.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="325">
+          <caret line="19" column="41" selection-start-line="19" selection-start-column="41" selection-end-line="19" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/service/auth/src/main/java/org/easy/auth/handler/RedisTokenLogoutSuccessHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="182">
+          <caret line="41" column="69" lean-forward="true" selection-start-line="41" selection-start-column="69" selection-end-line="41" selection-end-column="69" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
       </provider>
     </entry>
   </component>

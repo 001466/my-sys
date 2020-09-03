@@ -1,6 +1,6 @@
 package org.easy.gateway.jwt;
 
-import com.deocean.common.constant.TokenConstant;
+import org.easy.secure.constant.TokenConstant;
 import org.springframework.core.convert.converter.Converter;
 import org.springframework.http.server.reactive.ServerHttpRequest;
 import org.springframework.security.core.context.SecurityContext;

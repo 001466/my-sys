@@ -108,10 +108,11 @@
 
 
         <dependency>
-            <groupId>com.deocean</groupId>
-            <artifactId>deocean-tool-starter</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
+            <groupId>org.easy</groupId>
+            <artifactId>easy-secure-starter</artifactId>
+            <version>1.0-SNAPSHOT</version>
         </dependency>
+
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-thymeleaf</artifactId>

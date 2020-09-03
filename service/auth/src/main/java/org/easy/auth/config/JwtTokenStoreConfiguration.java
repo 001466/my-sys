@@ -41,7 +41,7 @@ public class JwtTokenStoreConfiguration {
 	 * 使用jwtTokenStore存储token
 	 */
 	@Bean
-	@ConditionalOnProperty(prefix = "deocean.security.oauth2", name = "storeType", havingValue = "jwt", matchIfMissing = true)
+	@ConditionalOnProperty(prefix = "auth.security.oauth2", name = "storeType", havingValue = "jwt", matchIfMissing = true)
 	public TokenStore jwtTokenStore() {
 		return new JwtTokenStore(jwtAccessTokenConverter());
 	}

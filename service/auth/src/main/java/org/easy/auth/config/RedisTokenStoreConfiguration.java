@@ -17,7 +17,7 @@ public class RedisTokenStoreConfiguration {
 	private RedisConnectionFactory redisConnectionFactory;
 
 	@Bean
-	@ConditionalOnProperty(prefix = "deocean.security.oauth2", name = "storeType", havingValue = "redis")
+	@ConditionalOnProperty(prefix = "auth.security.oauth2", name = "storeType", havingValue = "redis")
 	public TokenStore redisTokenStore() {
 		return new RedisTokenStore(redisConnectionFactory);
 	}

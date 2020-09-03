@@ -59,9 +59,9 @@ public class MobileLoginFailureHandler extends SimpleUrlAuthenticationFailureHan
     @Autowired
     private IUserFeign iUserFeign;
 
-    @Value("${deocean.security.oauth2.login-retry-max:5}")
+    @Value("${auth.security.oauth2.login-retry-max:5}")
     private Integer retryMax;
-    @Value("${deocean.security.oauth2.login-bound-minutes:15}")
+    @Value("${auth.security.oauth2.login-bound-minutes:15}")
     private Integer boundMinutes;
 
 
