@@ -44,15 +44,22 @@ mybatis-plus:
     cache-enabled: false
 
 
+logging:
+  level:
+    org.easy.system.mapper: DEBUG
+    root: INFO
+
+swagger:
+  title: SYSTEM
+  base-packages:
+    - org.easy.system.controller
+
 info:
   version: 2.0.0
   desc: ${spring.application.name}
 
 
-swagger:
-  title: API
-  base-packages:
-    - org.easy.system.controller
+
 
 
 

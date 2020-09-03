@@ -1,0 +1,37 @@
+server:
+  port: 8100
+
+spring:
+  thymeleaf:
+    prefix: classpath:/views/
+    check-template-location: true
+    suffix: .html
+    cache: false
+  application:
+    name: auth
+#  profiles:
+#    active: 111
+  cloud:
+    nacos:
+      config:
+        shared-dataids: zipkin.yaml,management.yaml,sentinel.yaml,hystrix.yaml,jackson.yaml
+        #refreshable-dataids: zipkin.yaml,logging.yaml,sentinel.yaml,hystrix.yaml
+        ext-config:
+          - {data-id: auth.yaml,group: DEFAULT_GROUP,refresh: true}
+swagger:
+  title: AUTH
+  base-packages:
+  - org.easy.auth.endpoint
+
+
+
+logging:
+  path: logs
+  file: logs/${spring.application.name}.log
+  level:
+    root: INFO
+    com.alibaba.nacos: FATAL
+    org.springframework.cloud.alibaba.nacos: FATAL
+    com.zaxxer.hikari.pool: FATAL
+
+

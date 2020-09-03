@@ -1,0 +1,11 @@
+INSERT INTO `menu`(`parent_id`, `code`, `name`, `alias`, `path`, `source`, `sort`, `category`, `action`, `is_open`, `remark`, `is_deleted`)
+VALUES (0, 'user', '用户管理', 'menu', '/user/user', NULL, 1, 1, 0, 1, NULL, 0);
+set @parentid = (SELECT LAST_INSERT_ID());
+INSERT INTO `menu`(`parent_id`, `code`, `name`, `alias`, `path`, `source`, `sort`, `category`, `action`, `is_open`, `remark`, `is_deleted`)
+VALUES (@parentid, 'user_add', '新增', 'add', '/user/user/add', 'plus', 1, 2, 1, 1, NULL, 0);
+INSERT INTO `menu`(`parent_id`, `code`, `name`, `alias`, `path`, `source`, `sort`, `category`, `action`, `is_open`, `remark`, `is_deleted`)
+VALUES (@parentid, 'user_edit', '修改', 'edit', '/user/user/edit', 'form', 2, 2, 2, 2, NULL, 0);
+INSERT INTO `menu`(`parent_id`, `code`, `name`, `alias`, `path`, `source`, `sort`, `category`, `action`, `is_open`, `remark`, `is_deleted`)
+VALUES (@parentid, 'user_delete', '删除', 'delete', '/api/user/user/remove', 'delete', 3, 2, 3, 3, NULL, 0);
+INSERT INTO `menu`(`parent_id`, `code`, `name`, `alias`, `path`, `source`, `sort`, `category`, `action`, `is_open`, `remark`, `is_deleted`)
+VALUES (@parentid, 'user_view', '查看', 'view', '/user/user/view', 'file-text', 4, 2, 2, 2, NULL, 0);

@@ -1,0 +1,24 @@
+<html>
+<body>
+	<h1>OAuth Approval</h1>
+	
+	<h3 th:text="${clientId}+' 请求授权，该应用将获取你的以下信息...这个页面是自定义的哦！ '"></h3>
+	<h5 th:each="scope:${scopes}" th:text="${scope}"></h5>
+	
+	<form id="confirmationForm" name="confirmationForm" action="/oauth/authorize" method="post">
+		<input th:each="scope:${scopes}" th:name="'scope.'+${scope}" value="true" type="hidden"/>
+		<input name="user_oauth_approval" value="true" type="hidden" />
+		<label><input name="authorize" value="Authorize" type="submit" /></label>
+	</form>
+
+
+	<form id="denialForm" name="denialForm" action="/oauth/authorize" method="post">
+		<input th:each="scope:${scopes}" th:name="'scope.'+${scope}" value="false" type="hidden"/>
+		<input name="user_oauth_approval" value="false" type="hidden" />
+		<label><input name="deny" value="Deny" type="submit" /></label>
+	</form>
+
+
+</body>
+</html>
+

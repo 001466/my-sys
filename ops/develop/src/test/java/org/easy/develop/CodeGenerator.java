@@ -29,19 +29,19 @@ public class CodeGenerator {
 	/**
 	 * 代码生成的模块名
 	 */
-	public static String JAVA_CODE_NAME = "应用管理";
+	public static String JAVA_CODE_NAME = "用户管理";
 	/**
 	 * 代码所在服务名
 	 */
-	public static String JAVA_SERVICE_NAME = "system";
+	public static String JAVA_SERVICE_NAME = "user";
 	/**
 	 * 代码生成的包名
 	 */
-	public static String JAVA_PACKAGE_NAME = "org.easy.system";
+	public static String JAVA_PACKAGE_NAME = "org.easy.user";
 	/**
 	 * 代码生成的路径
 	 */
-	public static String JAVA_PACKAGE_PATH = "F:\\workspace\\my-sys\\service\\system";
+	public static String JAVA_PACKAGE_PATH = "F:\\workspace\\my-sys\\service\\user";
 
 
 	/**
@@ -62,7 +62,7 @@ public class CodeGenerator {
 	/**
 	 * 需要生成的表名(两者只能取其一)
 	 */
-	public static String[] TABLES_INCLUDE = {"client"};
+	public static String[] TABLES_INCLUDE = {"user"};
 	/**
 	 * 需要排除的表名(两者只能取其一)
 	 */

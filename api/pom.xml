@@ -13,6 +13,8 @@
     <packaging>pom</packaging>
     <modules>
         <module>system-api</module>
+        <module>user-api</module>
+        <module>auth-api</module>
     </modules>
 
 

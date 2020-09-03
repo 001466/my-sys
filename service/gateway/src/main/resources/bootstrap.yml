@@ -1,0 +1,39 @@
+
+server:
+  port: 9999
+
+spring:
+  security:
+    user:
+      name: admin
+      password: admin
+  application:
+    name: gateway
+#  profiles:
+#    active: 111
+  cloud:
+    nacos:
+      config:
+        shared-dataids: zipkin.yaml,management.yaml,logging.yaml,sentinel.yaml,hystrix.yaml
+        #refreshable-dataids: zipkin.yaml,logging.yaml,sentinel.yaml,hystrix.yaml
+        ext-config:
+          - {data-id: gateway.yaml,group: DEFAULT_GROUP,refresh: true}
+          - {data-id: blade.yaml,group: DEFAULT_GROUP,refresh: false}
+   
+
+
+logging:
+  path: logs
+  file: logs/${spring.application.name}.log
+  level:
+    root: INFO
+    com.alibaba.nacos: FATAL
+    org.springframework.cloud.alibaba.nacos: FATAL
+    com.zaxxer.hikari.pool: FATAL        
+
+
+
+swagger:
+  title: API
+  base-packages:
+    - org.easy.gateway.controller
