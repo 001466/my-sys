@@ -29,7 +29,7 @@
         </dependency>
         <dependency>
             <groupId>org.easy</groupId>
-            <artifactId>easy-mybatisplus</artifactId>
+            <artifactId>easy-mybatisplus-starter</artifactId>
             <version>1.0-SNAPSHOT</version>
         </dependency>
         <dependency>
