@@ -29,7 +29,6 @@ import org.easy.tool.util.Func;
 //import org.springblade.system.feign.IDictClient;
 
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.bind.annotation.RequestParam;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import org.easy.system.entity.Dict;
 import org.easy.system.vo.DictVO;
@@ -40,8 +39,8 @@ import java.util.List;
 /**
  * 字典管理 控制器
  *
- * @author EasyX
- * @since 2020-09-03
+ * @author EasyX Ó¢Ê¶ (240018840@qq.com)
+ * @since 2020-09-04
  */
 @RestController
 @AllArgsConstructor
@@ -65,7 +64,7 @@ public class DictController {
 	}
 
 	/**
-	* 分页 
+	* 列表 
 	*/
 	@GetMapping("/list")
 	@ApiOperation(value = "列表", notes = "传入dict", position = 2)
@@ -117,9 +116,9 @@ public class DictController {
 	* 删除 
 	*/
 	@PostMapping("/remove")
-	@ApiOperation(value = "逻辑删除", notes = "传入ids", position = 7)
+	@ApiOperation(value = "删除", notes = "传入ids", position = 7)
 	public R remove(@ApiParam(value = "主键集合", required = true) @RequestParam String ids) {
-		return R.status(dictService.deleteLogic(Func.toIntList(ids)));
+		return R.status(dictService.removeByIds(Func.toIntList(ids)));
 	}
 
 	

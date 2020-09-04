@@ -28,8 +28,8 @@ import org.easy.system.vo.DictVO;
 /**
  * 包装类,返回视图层所需的字段
  *
- * @author EasyX
- * @since 2020-09-03
+ * @author EasyX Ó¢Ê¶ (240018840@qq.com)
+ * @since 2020-09-04
  */
 @AllArgsConstructor
 public class DictWrapper extends BaseEntityWrapper<Dict, DictVO>  {

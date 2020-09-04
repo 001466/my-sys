@@ -51,7 +51,7 @@
         </dependency>
         <dependency>
             <groupId>org.easy</groupId>
-            <artifactId>easy-log</artifactId>
+            <artifactId>easy-log-starter</artifactId>
             <version>1.0-SNAPSHOT</version>
         </dependency>
     </dependencies>

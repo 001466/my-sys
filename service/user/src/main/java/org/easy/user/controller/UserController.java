@@ -136,7 +136,7 @@ public class UserController implements IUserFeign {
 
 
 	@Override
-	public R<UserInfo> loadUserByUsername(String account) {
+	public R<UserInfo> loadUserByUsername(@RequestParam String account) {
 
 		UserInfo userInfo = new UserInfo();
 		QueryWrapper<User> queryWrapper=new QueryWrapper<>();

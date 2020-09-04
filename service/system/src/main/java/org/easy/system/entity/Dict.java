@@ -16,7 +16,9 @@
  */
 package org.easy.system.entity;
 
-import org.easy.tool.support.BaseEntity;
+import com.baomidou.mybatisplus.annotation.IdType;
+import com.baomidou.mybatisplus.annotation.TableId;
+import java.io.Serializable;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import io.swagger.annotations.ApiModel;
@@ -25,16 +27,21 @@ import io.swagger.annotations.ApiModelProperty;
 /**
  * 实体类
  *
- * @author EasyX
- * @since 2020-09-03
+ * @author EasyX Ó¢Ê¶ (240018840@qq.com)
+ * @since 2020-09-04
  */
 @Data
-@EqualsAndHashCode(callSuper = true)
 @ApiModel(value = "Dict对象", description = "Dict对象")
-public class Dict extends BaseEntity {
+public class Dict implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
+    /**
+     * 主键
+     */
+    @ApiModelProperty(value = "主键")
+    @TableId(value = "id", type = IdType.AUTO)
+  private Integer id;
     /**
      * 父主键
      */
@@ -65,6 +72,11 @@ public class Dict extends BaseEntity {
      */
     @ApiModelProperty(value = "字典备注")
     private String remark;
+    /**
+     * 是否已删除
+     */
+    @ApiModelProperty(value = "是否已删除")
+    private Integer isDeleted;
 
 
 }

@@ -20,7 +20,7 @@ import java.util.List;
 public interface IUserFeign {
     String PATH="/user";
 
-    @RequestMapping(value = "/user-info",method = RequestMethod.GET)
+    @GetMapping(value = "/user-info")
     R<UserInfo> loadUserByUsername(@RequestParam("account") String account);
 
     @PostMapping("/submit")

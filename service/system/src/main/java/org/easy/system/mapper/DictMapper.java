@@ -25,8 +25,8 @@ import java.util.List;
 /**
  *  Mapper 接口
  *
- * @author EasyX
- * @since 2020-09-03
+ * @author EasyX Ó¢Ê¶ (240018840@qq.com)
+ * @since 2020-09-04
  */
 public interface DictMapper extends BaseMapper<Dict> {
 

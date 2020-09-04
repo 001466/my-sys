@@ -20,18 +20,18 @@ import org.easy.system.entity.Dict;
 import org.easy.system.vo.DictVO;
 import org.easy.system.mapper.DictMapper;
 import org.easy.system.service.IDictService;
-import org.easy.mybatisplus.base.BaseServiceImpl;
+import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import org.springframework.stereotype.Service;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 
 /**
  *  服务实现类
  *
- * @author EasyX
- * @since 2020-09-03
+ * @author EasyX Ó¢Ê¶ (240018840@qq.com)
+ * @since 2020-09-04
  */
 @Service
-public class DictServiceImpl extends BaseServiceImpl<DictMapper, Dict> implements IDictService {
+public class DictServiceImpl extends ServiceImpl<DictMapper, Dict> implements IDictService {
 
 	@Override
 	public IPage<DictVO> selectDictPage(IPage<DictVO> page, DictVO dict) {

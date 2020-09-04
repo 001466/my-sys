@@ -78,7 +78,7 @@ public class $!{table.controllerName} {
 	}
 
 	/**
-	* 分页 $!{table.comment}
+	* 列表 $!{table.comment}
 	*/
 	@GetMapping("/list")
 	@ApiOperation(value = "列表", notes = "传入$!{table.entityPath}", position = 2)

@@ -18,16 +18,16 @@ package org.easy.system.service;
 
 import org.easy.system.entity.Dict;
 import org.easy.system.vo.DictVO;
-import org.easy.mybatisplus.base.BaseService;
+import com.baomidou.mybatisplus.extension.service.IService;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 
 /**
  *  服务类
  *
- * @author EasyX
- * @since 2020-09-03
+ * @author EasyX Ó¢Ê¶ (240018840@qq.com)
+ * @since 2020-09-04
  */
-public interface IDictService extends BaseService<Dict> {
+public interface IDictService extends IService<Dict> {
 
 	/**
 	 * 自定义分页

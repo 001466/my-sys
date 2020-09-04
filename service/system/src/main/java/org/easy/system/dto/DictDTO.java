@@ -23,8 +23,8 @@ import lombok.EqualsAndHashCode;
 /**
  * 数据传输对象实体类
  *
- * @author EasyX
- * @since 2020-09-03
+ * @author EasyX Ó¢Ê¶ (240018840@qq.com)
+ * @since 2020-09-04
  */
 @Data
 @EqualsAndHashCode(callSuper = true)

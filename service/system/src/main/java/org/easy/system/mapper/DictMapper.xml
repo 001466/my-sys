@@ -4,14 +4,14 @@
 
     <!-- 通用查询映射结果 -->
     <resultMap id="dictResultMap" type="org.easy.system.entity.Dict">
-        <result column="id" property="id"/>
-        <result column="is_deleted" property="isDeleted"/>
+        <id column="id" property="id"/>
         <result column="parent_id" property="parentId"/>
         <result column="code" property="code"/>
         <result column="dict_key" property="dictKey"/>
         <result column="dict_value" property="dictValue"/>
         <result column="sort" property="sort"/>
         <result column="remark" property="remark"/>
+        <result column="is_deleted" property="isDeleted"/>
     </resultMap>
 
 

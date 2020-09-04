@@ -70,7 +70,7 @@ public class CodeGenerator {
 	/**
 	 * 是否包含基础业务字段
 	 */
-	public static Boolean HAS_SUPER_ENTITY = Boolean.TRUE;
+	public static Boolean HAS_SUPER_ENTITY = Boolean.FALSE;
 	/**
 	 * 基础业务字段
 	 */
